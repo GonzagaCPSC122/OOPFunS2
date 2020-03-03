@@ -1,5 +1,27 @@
 #include "Book.h"
 
+// DVC
+Book::Book() {
+	// initialize to "default" values that make sense for this type
+	title = "DEFAULT TITLE";
+	author = "DEFAULT AUTHOR";
+	numPages = -1;
+}
+
+// EVC
+Book::Book(string t, string a, int n) {
+	// initialize attributes to param values
+	title = t;
+	author = a;
+	numPages = n;
+}
+
+// destructor
+Book::~Book() {
+	// book objects have nothing to free so there is nothing to do here..
+	cout << "Hello from Book destructor" << endl;
+}	
+
 // :: scope resolution operator
 // Book:: is it expands the scope of display() to include Book 
 void Book::display() {

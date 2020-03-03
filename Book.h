@@ -25,6 +25,22 @@ class Book {
 		int numPages;
 	public:
 		// behavior 
+		// a constructor is a special member function that creates an object and initializes its state (attributes)
+		// there is always a default constructor that is called... it does nothing
+		// we can override this behavior by defining a default value constructor (DVC)
+		// note: constructors have no return type
+		Book(); // DVC prototype
+		// explict value constructors (EVC)
+		// these constuctors accept arguments to initialize attribute values too
+		// can overload constructors!!
+		Book(string, string, int); // EVC prototype
+		// a destructor is a special member function that is automatically called whenever an object is about to be destoryed (AKA destructed AKA deallocated)
+		// there in only desctructor!! no return type, no arguments
+		// what should a destructor do?
+		// free/release any resouces (e.g. close files)
+		// free/dellacote any dynamically allocated mem associated with this object
+		~Book(); // destructor prototype
+		
 		// member functions
 		void display();
 		// setters (AKA mutators)
